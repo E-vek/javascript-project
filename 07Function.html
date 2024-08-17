@@ -1,18 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Functions</title>
 </head>
+
 <body>
     <script>
-    function calculateTax(cost, taxPercent=0.2){
-        console.log(cost*taxPercent);
-    }
-    calculateTax(2000);
-    calculateTax(5000);
-    return;
+        //Excercise-02//
+        // function calculateTax(cost, taxPercent=0.2){
+        //     console.log(cost*taxPercent);
+        // }
+        // calculateTax(2000);
+        // calculateTax(5000);
+        // return;
+
+        //****Excercise-02****//
+        // function greet(name) {
+        //     if (!name) {
+        //         console.log(`Hi there!`)
+        //     } else {
+        //         console.log(`hello ${name}!`);
+        //     }
+        // }
+        // greet(`vivek`);
+        // greet(`Pratham`);
+        // greet();
+
+        //****Excercise-03****//
+        // function convertToFahrenheit(celsius) {
+        //     return (celsius * 9 / 5) + 32;
+        // }
+
+        // function convertToCelsius(fahrenheit) {
+        //     return (fahrenheit - 32) * 5 / 9;
+        // }   
+
+        // // function TO convert Temperature into onther unit
+        // function convertTemperature(degrees, unit) {
+        //     if (unit === 'C') {
+        //         const result = convertToFahrenheit(degrees);
+        //         return `${result}F`;
+        //     } else if (unit === 'F') {
+        //         const result = convertToCelsius(degrees);
+        //         return `${result}C`;
+        //     }
+        // }
+        // console.log(convertTemperature(25, 'C'));
+        // console.log(convertTemperature(86, 'F'));
+
+   
+      function convertLength(length, from, to) {
+        if (from === 'km' && to === 'miles') {
+          return `${length / 1.6} miles`;
+        } else if (from === 'miles' && to === 'km') {
+          return `${length * 1.6} km`;
+
+        // You can also do if (from === 'km' && to === 'km) { ... }
+        // if (from === to) is a trick you can use to save some code.
+        } else if (from === to) {
+          return `${length} ${to}`;
+        }
+      }
+
+      console.log(convertLength(50, 'miles', 'km'));
+      console.log(convertLength(32, 'km', 'miles'));
+      console.log(convertLength(50, 'km', 'km'));
     </script>
-</body>
+  </body>
 </html>
+    
